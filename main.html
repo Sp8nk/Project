@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            width: 100%;
+            height: auto;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/img.jpg);
+            /* background: url("peakpx.jpg"); */
+            background-size: cover;
+            background-position: top;
+
+        }
+
+        .header {
+            color: white;
+        }
+
+
+        .left {
+            font-family: myFont;
+            display: inline-block;
+            position: absolute;
+            left: 60px;
+            top: 20px;
+            /* border: 5px solid red; */
+        }
+
+        img {
+            filter: invert(100);
+            max-width: 50%;
+            width: 250px;
+            margin-left: 20px;
+
+        }
+
+
+
+        .left div {
+            line-height: 19px;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .centre {
+            /* border: 2px solid red; */
+            display: flex;
+            margin: 20px auto;
+            width: 45%;
+
+        }
+
+        .navbar {
+            display: inline-block;
+            margin: 15px auto;
+        }
+
+        .navbar li {
+            /* border: 2px solid red; */
+            list-style: none;
+            display: inline-block;
+            margin: 0px 13px;
+            padding: 4px 12px;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-family: myFont2;
+            font-size: large;
+        }
+
+        .navbar li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar li:hover::after {
+            width: 100%;
+        }
+
+        .navbar li a:hover {
+            color: #b9b9b9;
+        }
+
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 32px;
+            top: 20px;
+            /* border: 5px solid red; */
+        }
+
+        .btn2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #009688;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span {
+            background: #009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .btn2:hover span {
+            width: 100%;
+
+        }
+
+        .btn2:hover {
+            border: none;
+        }
+
+        .btn {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            padding: 4px 10px;
+            margin: 15px 4px;
+            background-color: rgb(81 92 103);
+            color: white;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: rgb(64, 75, 86);
+            cursor: pointer;
+        }
+
+        .btn:active {
+            color: black;
+        }
+
+        section {
+            color: rgb(255, 255, 255);
+
+            /* border: 2px solid black; */
+            background-image: url(background.avif);
+            background-size: cover;
+            background-position: top center;
+            padding: 100px 200px 100px 200px;
+            text-align: center;
+            opacity: 0.9;
+
+        }
+
+        .sechead {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .secbody {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .container {
+
+            /* border: 2px solid red; */
+            height: 800px;
+            width: 1350px;
+            margin: 20px auto;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* .box {
+            border: 5px solid #b13c3c;
+            border-radius: 20px;
+            background-color: #d4d5d6;
+            height: 30px;
+            width: 200px;
+            box-shadow: 8px 8px 15px rgb(162, 162, 162);
+
+        } */
+
+        /* img {
+            display: block;
+            width: 30%;
+            margin: 2px auto;
+        } */
+
+        .smallboxhead {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 300px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 40px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #009688;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .smallboxhead:hover span {
+            width: 100%;
+
+        }
+
+        .smallboxhead:hover {
+            border: none;
+        }
+
+        .smallboxbody {
+            font-size: 15px;
+            padding: 0px 30px;
+        }
+
+        .form {
+            font-family: myFont3;
+            padding: 5px 10px;
+            margin: 5px 5px;
+        }
+
+        input,
+        textarea {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            padding: 4px 5px;
+            margin: 8px 0px;
+            border-radius: 5px;
+        }
+
+        .foot {
+
+            background-position: right;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            margin: 50px 0px 0px 0px;
+
+        }
+
+        .form {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <h1 class="sechead">Srimad Bhagavad Geeta</h1>
+        <p class="secbody">The sermon given by Lord Krishna to Arjun just before the start of the Mahabharata war is
+            known as Shrimad Bhagwat Gita . It is a part of the Bhishma Parva of the Mahabharata . The Gita has 18
+            chapters and 700 verses. The Gita is counted among the Prasthanatrayi , which also includes the
+            Upanishads and Brahmasutras . Therefore, according to the Indian tradition, the Gita has the same place as
+            the Upanishads and Dharmasutras . The Upanishads have been called cow and the Gita its milk.
+        </p>
+        <div>
+            <button class="btn2" type="button"><span></span><a
+                    href="https://hi.wikipedia.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE"
+                    target="_blank">View More</a></a></button>
+        </div>
+    </section>
+
+    <h2>CHAPTERS</h2>
+
+    <div class="container">
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span><a href="">Chapter 1</a></div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 2</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 3</div>
+
+        </div>
+
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 4</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 5</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span><a href="https://youtu.be/YDrvpXniX8Y">Chapter 6</a></div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 7</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 8</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 9</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 10</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 11</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 12</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 13</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 14</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 15</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 16</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 17</div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="smallboxhead"><span></span>Chapter 18</div>
+
+        </div>
+
+    </div>
+
+    <footer class="foot">
+        <form action="backend.php">
+            <h2>Contact us</h2>
+
+            <div class="form">
+                FULL NAME <br> <input type="text" name="MyName" placeholder="Enter Full Name">
+            </div>
+
+            <div class="form">
+                MAIL <br><input type="email" name="MyMail" placeholder="Enter Email">
+            </div>
+
+            <div class="form">
+                PHONE NUMBER <br> <input type="text" name="MyName" placeholder="Enter Phone Number">
+            </div>
+
+            <div class="form">
+                <label for="brief">Comment Section</label>
+                <br><textarea name="MyText" cols="50" rows="5" id="brief" placeholder="Enter your comments"></textarea>
+            </div>
+
+            <div id="subres" class="form">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </footer>
+
+
+
+</body>
+
+</html>
